@@ -24,6 +24,7 @@ class Create extends Component {
 
     onSubmit = (e) => {
         e.preventDefault();
+        console.log(this.state);
         const {title, description, author} = this.state;
 
         this.ref.add({

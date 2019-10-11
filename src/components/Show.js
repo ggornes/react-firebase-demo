@@ -14,6 +14,7 @@ class Show extends Component {
 
     componentDidMount() {
         const ref=firebase.firestore().collection('boards').doc(this.props.match.params.id);
+        // QuerySnapShot.doc()
         ref.get()
             .then((doc) =>{
                 if (doc.exists) {
