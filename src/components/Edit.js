@@ -163,6 +163,9 @@ class Show extends Component {
                                 <button type="submit" className="btn btn-primary">
                                     Save
                                 </button>
+                                <Link to={`/`} className="btn btn-success mr-2">
+                                    Cancel
+                                </Link>
                                 <button
                                     onClick={this.delete.bind(this, this.state.key)}
                                     className="btn btn-danger">
