@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import firebase from "../Firebase";
 import './App.css';
+import * as truncate from 'friendly-truncate';
 
 class App extends Component {
   constructor(props) {
@@ -61,10 +62,10 @@ class App extends Component {
                   <tr>
                     <td>
                         <Link to={`/show/${board.key}`}>
-                          {board.title}
+                          {truncate.truncateEnd(board.title, 70)}
                         </Link>
                     </td>
-                    <td>{board.description}</td>
+                    <td>{truncate.truncateEnd(board.description, 150)}</td>
                     <td>{board.author}</td>
                   </tr>
                   )
